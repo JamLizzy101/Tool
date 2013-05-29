@@ -20,7 +20,7 @@ Attribute PanelLeft.VB_VarHelpID = -1
 Private WithEvents PanelRight As cWidgetForm
 Attribute PanelRight.VB_VarHelpID = -1
 Dim LeftBut() As cwButton
-Dim Btn As cwButton
+Dim SpellAddBtn As cwButton
 Dim SpellFrmBox As cwTextBox
 Dim Hedder As cwLabel
 Dim ButCap() As String
@@ -82,8 +82,8 @@ Private Sub spellLayout()
         SpellFrmBox.MultiLine = True
         
     
-    Set Btn = PanelRight.Widgets.Add(New cwButton, "SpellAddBtn", 5, SpellFrmBox.Widget.Top + SpellFrmBox.Widget.Height + 5, 140, 25, True)
-        Btn.Caption = "Add Spelling"
+    Set SpellAddBtn = PanelRight.Widgets.Add(New cwButton, "SpellAddBtn", 5, SpellFrmBox.Widget.Top + SpellFrmBox.Widget.Height + 5, 140, 25, True)
+        SpellAddBtn.Caption = "Add Spelling"
     
     PanelRight.Visible = True
     PanelRight.Refresh
@@ -120,10 +120,17 @@ Private Sub Form_BubblingEvent(Sender As Object, EventName As String, P1 As Vari
                     spellLayout
                 Case "PanLeftBut1"
                     svgLayout
+                Case "SpellAddBtn"
+                    SpellAdd
             End Select
     End Select
     
 End Sub
+
+Private Sub SpellAdd()
+    Debug.Print "You Clicked me!"
+End Sub
+
 
 Private Sub Form_ResizeWithDimensions(ByVal NewWidth As Long, ByVal NewHeight As Long)
     Const OffsPxl As Long = 5

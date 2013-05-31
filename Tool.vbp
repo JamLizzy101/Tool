@@ -1,7 +1,7 @@
 Type=Exe
 Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\Windows\SysWOW64\stdole2.tlb#OLE Automation
 Reference=*\G{C79C91A4-10F5-4F71-A490-3B7915514344}#2.2#0#S:\Resources\System32\vbRichClient5.dll#vbRichClient5
-Reference=*\G{82E2B357-6C81-4C9C-9EA4-F06367AC962F}#2.0#0#S:\Vb6\Common\Shared\CAMIWidgetLibrary.dll#CAMI Cairo Widget Library
+Reference=*\G{F4EB1B9D-716E-4B23-8123-53E0102E209C}#383.0#0#..\..\box\rc-tute\vbWidgets.dll#vbWidgets
 Module=modMain; modMain.bas
 Class=cfMain; cfMain.cls
 Startup="Sub Main"
